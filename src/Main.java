@@ -13,13 +13,19 @@ public class Main {
     Требуется создать отдельный класс для запуска приложения и объявить метод main в нем.
     7. В том же методе main изменить год публикации одной из книг с помощью сеттера.
      */
+
+    /*
+    Реализовать методы toString, equals и hashCode в классах Author и Book, которые были созданы на прошлом уроке.
+    Обратите внимание, что toString книги не должен дублировать код из toString автора, а должен делегировать (вызывать)
+    его версию метода.
+     */
     public static void main(String[] args) {
         Author author = new Author("Alexander", "Pushkin");
         Author author1 = new Author("Sergei", "Esenin");
         Book book1 = new Book("Лукоморье", author, 1820);
         Book book2 = new Book("Черный человек",author1,1993);
         book1.setPublisherYear(2001);
-        System.out.println("book2 name = " + book2.getName());
+        System.out.println(book1.toString());
 
     }
 }
